@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "c1b2e5c8-5798-4657-8707-e550ff7d4a58",
+		"name": "Expenses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40356307"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7200/api/v1/modifier/addmodifier Copy 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Electricity Bill\",\r\n  \"desc\": \"monthly payment of elctricity bill\",\r\n  \"expenseType\": \"Bill\",\r\n  \"amount\": 5000,\r\n  \"expenseTypeId\": \"676158009d6143d9acce750b\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/expense/addExpense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"expense",
+						"addExpense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/modifier/addmodifier Copy 4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Electricity Bill\",\r\n  \"desc\": \"monthly payment of elctricity bill\",\r\n  \"expenseType\": \"Bill\",\r\n  \"amount\": 5000,\r\n  \"expenseTypeId\": \"676158009d6143d9acce750b\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/expense/getExpenses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"expense",
+						"getExpenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/modifier/addmodifier Copy 5",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Electricity Bill\",\r\n  \"desc\": \"monthly payment of elctricity bill\",\r\n  \"expenseType\": \"Bill\",\r\n  \"amount\": 6000,\r\n  \"expenseTypeId\": \"676158009d6143d9acce750b\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/expense/updateExpense/6761639885405e6e394799d5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"expense",
+						"updateExpense",
+						"6761639885405e6e394799d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/modifier/addmodifier Copy 6",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Electricity Bill\",\r\n  \"desc\": \"monthly payment of elctricity bill\",\r\n  \"expenseType\": \"Bill\",\r\n  \"amount\": 6000,\r\n  \"expenseTypeId\": \"676158009d6143d9acce750b\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/expense/deleteExpense/6761639885405e6e394799d5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"expense",
+						"deleteExpense",
+						"6761639885405e6e394799d5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

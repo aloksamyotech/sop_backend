@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "99238bbf-433b-41a9-8d0f-509ea13811fe",
+		"name": "Expense Type",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40356307"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7200/api/v1/modifier/addmodifier Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expenseName\": \"Kitchen\",\r\n  \"desc\": \"Expenses related to kitchen items \"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/expenseType/addExpenseType",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"expenseType",
+						"addExpenseType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/modifier/addmodifier Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expenseName\": \"Salary\",\r\n  \"desc\": \"Expenses related to salary of employees \"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/expenseType/addExpenseType",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"expenseType",
+						"addExpenseType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/modifier/addmodifier Copy 3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/expenseType/getExpenseTypes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"expenseType",
+						"getExpenseTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/modifier/addmodifier Copy 4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expenseName\": \"Kitchen-POS\",\r\n  \"desc\": \"Expenses related to kitchen POS items  \"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/expenseType/softDeleteExpenseType/6761584d9d6143d9acce750e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"expenseType",
+						"softDeleteExpenseType",
+						"6761584d9d6143d9acce750e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "9438ab3e-50bd-4e3f-a0bd-8828eb07e3aa",
+		"name": "Food Category",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40356307"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7200/api/v1/Ingredient/addIngredient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\": \"Healthy Food\",\r\n    \"desc\": \"good for health\",\r\n    \"isAvailable\": true,\r\n    \"image\": \"C:/Users/Administrator/Downloads/dishsnippet\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/category/addCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"category",
+						"addCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/category/getCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7200/api/v1/category/getCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"category",
+						"getCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/category/getCategory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\": \"South Indian\",\r\n    \"desc\": \"North India people prefer it\",\r\n    \"isAvailable\": true,\r\n    \"image\": \"C:/Users/Administrator/Downloads/screenshot-1.png\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/category/updateCategory/676001f55b2f381537009621",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"category",
+						"updateCategory",
+						"676001f55b2f381537009621"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/category/addCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7200/api/v1/category/addCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"category",
+						"addCategory"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

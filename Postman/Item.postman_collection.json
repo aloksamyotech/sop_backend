@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "1050c970-714c-4023-ad87-af016716af7f",
+		"name": "Item",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40356307"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7200/api/v1/item/additem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"itemName\": \"Sproutes\",\r\n  \"desc\": \"A delicious item\",\r\n  \"active\": true,\r\n  \"image\": \"path/to/image.jpg\",\r\n  \"discount\": 10,\r\n  \"comment\": \"Best seller\",\r\n  \"rating\": 4.5,\r\n  \"totalServing\": 2,\r\n  \"cost\": 100,\r\n  \"price\": 150,\r\n  \"ingredient\": [\"moong\", \"gram\", \"soyabean\"],\r\n  \"itemId\": \"67610b96bc54e0c661b0db0e\",\r\n  \"categoryName\": \"Healthy Food\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/item/additem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"item",
+						"additem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/item/additem Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"itemName\": \"Idli\",\r\n  \"desc\": \"A delicious item\",\r\n  \"active\": true,\r\n  \"image\": \"path/to/image.jpg\",\r\n  \"discount\": 10,\r\n  \"comment\": \"Best seller\",\r\n  \"rating\": 4.5,\r\n  \"totalServing\": 2,\r\n  \"cost\": 100,\r\n  \"price\": 150,\r\n  \"ingredient\": [\"moong\", \"gram\", \"floor\"],\r\n  \"itemId\": \"676001f55b2f381537009621\",\r\n  \"categoryName\": \"Healthy Food\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/item/additem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"item",
+						"additem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/item/additem Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"itemName\": \"Nuts\",\r\n  \"active\": true,\r\n  \"image\": \"path/to/image.jpg\",\r\n  \"discount\": 10,\r\n  \"comment\": \"Best seller\",\r\n  \"rating\": 4.5,\r\n  \"totalServing\": 2,\r\n  \"cost\": 100,\r\n  \"price\": 150,\r\n  \"ingredient\": [\"moong\", \"gram\", \"soyabean\"],\r\n  \"itemId\": \"67610b96bc54e0c661b0db0e\",\r\n  \"categoryName\": \"Healthy Food\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/item/additem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"item",
+						"additem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/item/additem Copy 3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/item/deleteItem/676110afbc54e0c661b0db1c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"item",
+						"deleteItem",
+						"676110afbc54e0c661b0db1c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/item/additem Copy 4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/item/getItem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"item",
+						"getItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7200/api/v1/item/additem Copy 5",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"itemName\": \"Idli-Sambhar\",\r\n  \"desc\": \"A delicious item\",\r\n  \"active\": true,\r\n  \"image\": \"path/to/image.jpg\",\r\n  \"discount\": 10,\r\n  \"comment\": \"Best seller\",\r\n  \"rating\": 4.5,\r\n  \"totalServing\": 2,\r\n  \"cost\": 100,\r\n  \"price\": 150,\r\n  \"ingredient\": [\"moong\", \"gram\", \"floor\"],\r\n  \"itemId\": \"676001f55b2f381537009621\",\r\n  \"categoryName\": \"Healthy Food\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7200/api/v1/item/updateItem/67610f86bc54e0c661b0db14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7200",
+					"path": [
+						"api",
+						"v1",
+						"item",
+						"updateItem",
+						"67610f86bc54e0c661b0db14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
