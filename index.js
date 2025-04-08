@@ -7,6 +7,9 @@ import "dotenv/config"
 import responseInterceptor from './src/utils/responseInterceptor.js';
 import path from 'path';
 import UserRouter from './src/routes/user.js';
+import { CronJob, stopAllJobs } from './src/services/cronjob.js';
+
+
 
 const app = express();
 const PORT = (() => {
@@ -27,6 +30,8 @@ await connectDB()
 app.use(responseInterceptor);
 app.use(globalExceptionHandler);
 app.use("/api/v1/user", UserRouter)
+CronJob();
+
 
 app.listen(PORT, () => {
     logger.info(`Server is running at port ${PORT}`);
