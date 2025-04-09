@@ -10,24 +10,12 @@ export async function CronJob() {
     try {
         console.log("Starting CronJob setup...");
 
-        // Stop existing cron jobs if any
         if (activeCronJobs.length > 0) {
             console.log("Stopping existing cron jobs...");
             activeCronJobs.forEach((job) => job.stop());
             activeCronJobs = [];
         }
 
-        // Define timezone mappings
-        const dialCodeToTimezone = {
-            "+1": "America/New_York",
-            "+44": "Europe/London",
-            "+91": "Asia/Kolkata",
-            "+46": "Europe/Stockholm",
-            "+47": "Europe/Oslo",
-            "+45": "Europe/Copenhagen",
-        };
-
-        // Fetch user-related bank data
         console.log("Fetching bank row data with user details...");
         const bankRowData = await BankRowData.aggregate([
             {
@@ -56,7 +44,8 @@ export async function CronJob() {
             return [];
         }
 
-        const cronExpression = `*/5 * * * *`; 
+        const cronExpression = `0 2 * * *`; 
+        
         console.log(`Scheduling cron job with expression: ${cronExpression}`);
 
         const job = cron.schedule(
@@ -75,7 +64,6 @@ export async function CronJob() {
 
                     console.log("Access token received:", tokenResponse.accessToken);
 
-                    // Optional delay (non-blocking) — if you still want to keep it:
                     (async () => {
                         console.log("Waiting 60 seconds non-blocking inside cron job...");
                         await new Promise(res => setTimeout(res, 60 * 1000));
