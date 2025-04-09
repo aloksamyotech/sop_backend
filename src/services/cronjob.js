@@ -17,34 +17,8 @@ export async function CronJob() {
         }
 
         console.log("Fetching bank row data with user details...");
-        const bankRowData = await BankRowData.aggregate([
-            {
-                $lookup: {
-                    from: "users",
-                    localField: "user_id",
-                    foreignField: "_id",
-                    as: "userDetails",
-                },
-            },
-            { $unwind: "$userDetails" },
-            {
-                $project: {
-                    _id: 1,
-                    user_id: 1,
-                    id: 1,
-                    country_code: "$userDetails.country_code",
-                },
-            },
-        ]);
 
-        console.log("Bank row data fetched:", bankRowData.length, "records");
-
-        if (!bankRowData || bankRowData.length === 0) {
-            console.log("No bank row data found to schedule jobs");
-            return [];
-        }
-
-        const cronExpression = `0 2 * * *`; 
+        const cronExpression = `0 * * * *`; 
         
         console.log(`Scheduling cron job with expression: ${cronExpression}`);
 
@@ -54,6 +28,33 @@ export async function CronJob() {
                 console.log("Cron job triggered");
 
                 try {
+
+                    const bankRowData = await BankRowData.aggregate([
+                        {
+                            $lookup: {
+                                from: "users",
+                                localField: "user_id",
+                                foreignField: "_id",
+                                as: "userDetails",
+                            },
+                        },
+                        { $unwind: "$userDetails" },
+                        {
+                            $project: {
+                                _id: 1,
+                                user_id: 1,
+                                id: 1,
+                                country_code: "$userDetails.country_code",
+                            },
+                        },
+                    ]);
+            
+                    console.log("Bank row data fetched:", bankRowData.length, "records");
+            
+                    if (!bankRowData || bankRowData.length === 0) {
+                        console.log("No bank row data found to schedule jobs");
+                        return [];
+                    }
                     console.log("Requesting access token...");
                     const tokenResponse = await getAccessToken();
 
